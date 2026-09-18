@@ -1,0 +1,15 @@
+PySide6
+pyqtgraph
+numpy
+pandas
+pyarrow
+h5py
+opencv-python-headless
+ouster-sdk
+PyOpenGL
+pyserial  # optional: only needed for tests/radar_dashboard.py's live-hardware mode
+
+# test-only
+pytest
+pytest-qt
+psutil
