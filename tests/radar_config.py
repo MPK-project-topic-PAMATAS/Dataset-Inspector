@@ -21,12 +21,17 @@ is left unavailable (None) rather than invented.
 from __future__ import annotations
 
 import ast
+import os
 import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Optional
 
-DATA_COLLECTION_ROOT = Path("/media/vgtu/ssd11/vgtu/Projects/Data-Collection-GCS")
+# Sibling checkout next to Dataset-Inspector (override with DATA_COLLECTION_ROOT env var).
+DATA_COLLECTION_ROOT = Path(
+    os.environ.get("DATA_COLLECTION_ROOT")
+    or Path(__file__).resolve().parents[2] / "Data-Collection-GCS"
+)
 RECEIVER_PY = DATA_COLLECTION_ROOT / "radar" / "receiver.py"
 SETTINGS_PY = DATA_COLLECTION_ROOT / "config" / "settings.py"
 POINT_CLOUD_DOC = DATA_COLLECTION_ROOT / "docs" / "RADAR_POINT_CLOUD.md"

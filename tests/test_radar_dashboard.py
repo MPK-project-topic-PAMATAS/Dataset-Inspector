@@ -34,7 +34,7 @@ from radar_dashboard import (  # noqa: E402
 from session import RecordingSession  # noqa: E402
 
 DATA_COLLECTION_ROOT = radar_config.DATA_COLLECTION_ROOT
-REAL_DATASET_ROOT = Path("/media/vgtu/ssd11/vgtu/Projects/Dataset-Inspector/output_multi-record")
+REAL_DATASET_ROOT = Path(__file__).resolve().parents[1] / "output_multi-record"
 
 
 def _write_points(base: Path, rel_path: str, points: list[dict], frame_id=0, timestamp_ns=0):

@@ -85,7 +85,7 @@ from session import RecordingSession  # noqa: E402
 
 import radar_config  # noqa: E402
 
-DEFAULT_DATASET_ROOT = Path("/media/vgtu/ssd11/vgtu/Projects/Dataset-Inspector/output_multi-record")
+DEFAULT_DATASET_ROOT = Path(__file__).resolve().parents[1] / "output_multi-record"
 RECENT_INTERVAL_HISTORY = 200
 SPEED_CHOICES = [0.25, 0.5, 1.0, 2.0, 4.0]
 
